@@ -15,10 +15,6 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_yf5fn"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_d0u6y"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
-
 [node name="Nivel" type="Node3D" unique_id=1451792119]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1231876476]
@@ -42,7 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.28057277, -1.5)
 size = Vector3(3, 0.4388545, 4)
 
 [node name="CSGCylinder3D2" type="StaticBody3D" parent="CSGCombiner3D" unique_id=2073442634]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49924994, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49924994, -6.6095085)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/CSGCylinder3D2" unique_id=909690829]
 shape = SubResource("BoxShape3D_yf5fn")
@@ -51,22 +47,13 @@ shape = SubResource("BoxShape3D_yf5fn")
 mesh = SubResource("BoxMesh_57qmd")
 
 [node name="CSGCylinder3D3" type="StaticBody3D" parent="CSGCombiner3D" unique_id=925662821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.0010000467, -7.5326867)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0611095, 0.0010000467, -8.79867)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/CSGCylinder3D3" unique_id=1803866260]
 shape = SubResource("BoxShape3D_57qmd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CSGCombiner3D/CSGCylinder3D3" unique_id=1914054170]
 mesh = SubResource("BoxMesh_yf5fn")
-
-[node name="CSGCylinder3D4" type="StaticBody3D" parent="CSGCombiner3D" unique_id=1241235927]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0015001297, -9)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/CSGCylinder3D4" unique_id=1285508366]
-shape = SubResource("BoxShape3D_d0u6y")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGCombiner3D/CSGCylinder3D4" unique_id=1089938496]
-mesh = SubResource("BoxMesh_g4v7s")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=1138493962]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.39456892, 1, -15)

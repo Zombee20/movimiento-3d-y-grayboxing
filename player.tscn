@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://3kiw6qr3fb08"]
+
+[ext_resource type="Script" uid="uid://b3rimtxnd2kep" path="res://movimiento-3d-y-grayboxing/player.gd" id="1_mkbaa"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+radius = 0.57177734
+height = 2.0358887
+
+[node name="Player" type="CharacterBody3D" unique_id=1545347586]
+script = ExtResource("1_mkbaa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=950691424]
+mesh = SubResource("CapsuleMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1737300498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.017944336, 0)
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=655627327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018017828, 0.43200815, 0.46547806)
+size = Vector3(0.6401367, 0.30908203, 0.35266113)
+
+[node name="GiroCamara" type="Node3D" parent="." unique_id=597774370]
+
+[node name="Camera3D" type="Camera3D" parent="GiroCamara" unique_id=2132397044]
+transform = Transform3D(-0.9999889, 0, 0.0047093774, 0, 1, 0, -0.0047093774, 0, -0.9999889, 0, 0.48291928, 0.6451405)

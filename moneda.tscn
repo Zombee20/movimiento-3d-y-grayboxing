@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://x6qjck02jgam"]
+
+[ext_resource type="Script" uid="uid://b82txd380aylu" path="res://movimiento-3d-y-grayboxing/moneda.gd" id="1_2le7r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
+albedo_color = Color(0.7657197, 0.7657191, 7.70092e-07, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g4v7s"]
+top_radius = 0.21679688
+bottom_radius = 0.21679688
+height = 0.07813672
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+radius = 0.2614013
+
+[node name="Moneda" type="Node3D" unique_id=605877105]
+script = ExtResource("1_2le7r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1689169151]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.0005000217, 0.03856836)
+material_override = SubResource("StandardMaterial3D_yf5fn")
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1841696874]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2128707491]
+shape = SubResource("SphereShape3D_g4v7s")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
